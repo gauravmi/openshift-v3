@@ -1,10 +1,5 @@
-require 'spec_helper'
-
-PROJECT_ROOT_PATH = Pathname(__dir__).parent
-PROJECT_CONFIG_PATH = PROJECT_ROOT_PATH + 'config'
-PROJECT_LIB_PATH = PROJECT_ROOT_PATH + 'lib'
-
-load File.join(PROJECT_LIB_PATH, 'config_reader.rb')
+config_reader_path = PROJECT_LIB_PATH + 'config_reader.rb'
+load config_reader_path.to_s
 
 describe 'config reader'  do
 	it 'should read config' do

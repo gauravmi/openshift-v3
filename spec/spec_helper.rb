@@ -7,3 +7,9 @@ RSpec.configure do |config|
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
+
+
+# Path configuration
+PROJECT_ROOT_PATH = Pathname(__dir__).parent
+PROJECT_CONFIG_PATH = PROJECT_ROOT_PATH + 'config'
+PROJECT_LIB_PATH = PROJECT_ROOT_PATH + 'lib'
