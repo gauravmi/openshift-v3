@@ -9,6 +9,7 @@ load File.join(PROJECT_LIB_PATH, 'config_reader.rb')
 describe 'config reader'  do
 	it 'should read config' do
 		config_reader = ConfigReader.new(File.join(PROJECT_CONFIG_PATH, 'config.yml')).read
-		expect(config_reader.username).to eq("gmi3024@gmail.com")
+		expect(config_reader.username).to eq('gmi3024@gmail.com')
+		expect(config_reader.url).to eq('https://console.starter-us-east-1.openshift.com/oapi/v1')
 	end
 end
