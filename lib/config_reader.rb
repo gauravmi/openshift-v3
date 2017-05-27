@@ -1,5 +1,5 @@
-require 'json'
 require 'yaml'
+require 'ostruct'
 
 class ConfigReader
 	def initialize(file_path)
@@ -7,7 +7,7 @@ class ConfigReader
 	end
 
 	def read
-		data = YAML::load(File.open(@path, "r")
-		JSON.parse(data.to_json)
+		data = YAML::load(File.open(@path, "r"))
+		OpenStruct.new(data)
 	end
 end
